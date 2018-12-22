@@ -2,6 +2,24 @@
 
 A new Flutter application.
 
+Aligns Text Vertical from right-top to left bottom.
+排版文字从右往左。
+
+how to use: see main.dart
+
+    CustomPaint(
+      painter: VerticalText(
+        text: "你好，这是垂直排版的文字，排版顺序从上到下，从右到左。",
+        textStyle: TextStyle(
+          color: Colors.red,
+          fontSize: 20,
+          letterSpacing: 4,
+          wordSpacing: 4),
+        width: 200,
+        height: 200,
+        ),
+    )
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
