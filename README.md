@@ -5,6 +5,10 @@ A new Flutter application.
 Aligns Text Vertical from right-top to left bottom.
 排版文字从右往左。
 
+Screenshot
+
+<img src="screenshot/screenshot.jpeg"  height="400" alt="Screenshot"/> 
+
 how to use: see main.dart
 
     CustomPaint(
@@ -19,6 +23,9 @@ how to use: see main.dart
         height: 200,
         ),
     )
+
+    
+ ---------------------------------------------------------
 
 ## Getting Started
 
