@@ -42,7 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 200,
               child: CustomPaint(
                 painter: VerticalText(
-                  text: "你好，这是垂直排版的文字，排版顺序从上到下，从右到左。",
+                  text: "你好，这是垂直排版的文字，排版顺序从上到下，从右到左。😊😂😄",
                   textStyle: TextStyle(
                       color: Colors.red,
                       fontSize: 20,

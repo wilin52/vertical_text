@@ -2,8 +2,8 @@
 
 A new Flutter application.
 
-Aligns Text Vertical from right-top to left bottom.
-排版文字从右往左。
+Aligns Text Vertical from right-top to left bottom.support emoji.
+排版文字从右往左。支持emoji。
 
 Screenshot
 

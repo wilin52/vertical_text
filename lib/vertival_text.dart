@@ -26,8 +26,9 @@ class VerticalText extends CustomPainter {
 
     maxWidth = findMaxWidth(text, textStyle);
 
-    for (int i = 0; i < text.length; i++) {
-      TextSpan span = new TextSpan(style: textStyle, text: text[i]);
+    text.runes.forEach((rune) {
+      String str = new String.fromCharCode(rune);
+      TextSpan span = new TextSpan(style: textStyle, text: str);
       TextPainter tp = new TextPainter(
           text: span,
           textAlign: TextAlign.center,
@@ -45,32 +46,35 @@ class VerticalText extends CustomPainter {
       }
 
       if (offsetX < -maxWidth) {
-        break;
+        return;
       }
 
       tp.paint(canvas, new Offset(offsetX, offsetY));
       offsetY += tp.height;
-    }
+    });
   }
 
   double findMaxWidth(String text, TextStyle style) {
     double maxWidth = 0;
-    for (int i = 0; i < text.length; i++) {
-      TextSpan span = new TextSpan(style: style, text: text[i]);
+
+    text.runes.forEach((rune) {
+      String str = new String.fromCharCode(rune);
+      TextSpan span = new TextSpan(style: style, text: str);
       TextPainter tp = new TextPainter(
           text: span,
           textAlign: TextAlign.center,
           textDirection: TextDirection.ltr);
       tp.layout();
       maxWidth = max(maxWidth, tp.width);
-    }
+    });
+
     return maxWidth;
   }
 
   @override
   bool shouldRepaint(VerticalText oldDelegate) {
     return oldDelegate.text != text ||
-        oldDelegate.textStyle != textStyle||
+        oldDelegate.textStyle != textStyle ||
         oldDelegate.width != width ||
         oldDelegate.height != height;
   }
